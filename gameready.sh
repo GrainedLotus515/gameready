@@ -19,7 +19,7 @@ if [[ `grep "^ID=" /etc/os-release | gawk -F '=' '{print $2}'` = arch ]] || [[ `
 then
     # RUN GAMEREADY-ARCH.SH
     echo -e "\n\n${RED}<-- Running gameready-arch.sh -->${ENDCOLOR}"
-    bash <(curl -s https://raw.githubusercontent.com/NayamAmarshe/gameready/main/gameready-arch.sh)
+    bash <(curl -s https://raw.githubusercontent.com/GrainedLotus515/gameready/main/gameready-arch.sh)
     exit 0
     
     # FOR DEBIAN AND UBUNTU
@@ -27,7 +27,7 @@ elif [[ `grep "^ID=" /etc/os-release | gawk -F '=' '{print $2}'` = debian ]] || 
 then
     # RUN GAMEREADY-DEBIAN.SH
     echo -e "\n\n${RED}<-- Running gameready-ubuntu.sh -->${ENDCOLOR}"
-    bash <(curl -s https://raw.githubusercontent.com/NayamAmarshe/gameready/main/gameready-ubuntu.sh)
+    bash <(curl -s https://raw.githubusercontent.com/GrainedLotus515/gameready/main/gameready-ubuntu.sh)
     exit 0
     
 else
