@@ -25,7 +25,7 @@ then
     # FOR DEBIAN AND UBUNTU
 elif [[ `grep "^ID=" /etc/os-release | gawk -F '=' '{print $2}'` = debian ]] || [[ `grep "^ID=" /etc/os-release | gawk -F '=' '{print $2}'` = ubuntu ]];
 then
-    # RUN GAMEREADY-DEBIAN.SH
+    # RUN GAMEREADY-UBUNTU.SH
     echo -e "\n\n${RED}<-- Running gameready-ubuntu.sh -->${ENDCOLOR}"
     bash <(curl -s https://raw.githubusercontent.com/GrainedLotus515/gameready/main/gameready-ubuntu.sh)
     exit 0
