@@ -56,22 +56,6 @@ paru -S --noconfirm lutris
 echo -e "\n\n${RED}<-- Installing Gamemode -->${ENDCOLOR}"
 paru -S --noconfirm gamemode lib32-gamemode
 
-# INSTALL XANMOD KERNEL
-if zenity --question --width 300 --title="Install Xanmod Kernel?" --text="THIS STEP IS TOTALLY OPTIONAL! Your current kernel is $(uname -r). We're going to install the Xanmod kernel.\\nXanmod is for enabling extra performance patches for kernels but might not contain certain proprietary drivers.\\nDo you want to install Xanmod?"; then
-    {
-        echo -e "\n\n${RED}<-- Installing Xanmod Kernel -->${ENDCOLOR}"
-        sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
-        sudo pacman-key --lsign-key FBA220DFC880C036
-        sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-        sudo echo "[chaotic-aur]" >> /etc/pacman.conf
-        sudo echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
-        sudo pacman -Syu --noconfirm
-        sudo pacman -S linux-xanmod-edge linux-xanmod-edge-headers --noconfirm
-        sudo grub-mkconfig -o /boot/grub/grub.cfg
-        zenity --info --width 200 --title="Success" --text="Xanmod kernel installed!"
-    }
-fi
-
 # INSTALL WINETRICKS DEPENDENCIES
 zenity --warning --title="Alright Listen Up" --width 300 --text="Now we're going to install dependencies for WINE like DirectX, Visual C++, DotNet and more.\\n Winetricks will try to install these dependencies for you, so it'll take some time.\\ nDo not panic if you don't receive visual feedback, it'll take time."
 
