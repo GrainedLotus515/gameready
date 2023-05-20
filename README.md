@@ -2,7 +2,7 @@
 
 # GameReady 🎮
 
-Install WINE, Winetricks, Lutris, Xanmod Kernel, GameMode, WINE Dependencies in just a single click. No hassle, no hustle.
+Install WINE, Winetricks, Lutris, GameMode, WINE Dependencies in just a single click. No hassle, no hustle.
 </div>
 
 # Supported Operating Systems 🚦
