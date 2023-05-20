@@ -6,6 +6,7 @@ RED="\e[31m"
 ENDCOLOR="\e[0m"
 
 # SHOW INITIAL DIALOGS
+zenity --info --width 300 --title="GameReady" --text="Hello. This is the Ubuntu/Debian based script to install packages to help you get gaming faster on linux!"
 zenity --warning --width 300 --title="Before Starting the Installation" --text="You may see a text asking for your password, just enter your password in the terminal. The password is for installing system libraries, so root access is required by GameReady. When you enter your password, do not worry if it doesn't show you what you typed, it's totally normal."
 
 # INSTALL WINE
