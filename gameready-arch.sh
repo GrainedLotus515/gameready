@@ -20,6 +20,10 @@ zenity --warning --width=100 --height=100 --no-wrap --title="Before Starting the
 # ENABLE PARALLEL DOWNLOADS
 sudo sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 10/" /etc/pacman.conf
 
+# INSTALLING MANGOHUD
+echo -e "\n\n${RED}<-- Installing Mangohud -->${ENDCOLOR}"
+sudo pacman -S mangohud --noconfirm
+
 # INSTALL PARU
 echo -e "\n\n${RED}<-- Installing PARU -->${ENDCOLOR}"
 sudo pacman -S --needed --noconfirm base-devel
