@@ -39,6 +39,10 @@ cd .. || {
 }
 rm -rf paru-bin
 
+# INSTALLING GOVERLAY
+echo -e "\n\n${RED}<-- Installing Goverlay -->${ENDCOLOR}"
+paru -S --noconfirm goverlay-bin
+
 # INSTALL WINE
 echo -e "\n\n${RED}<-- Installing WINE -->${ENDCOLOR}"
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
